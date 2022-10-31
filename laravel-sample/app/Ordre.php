@@ -32,9 +32,9 @@ class Ordre extends Model
 
 
 
-    public function findByUserIdAndSetTimePrefAndSituationFlg($user_id, $pref_id, $situ_flg) {
+    public static function findByUserIdAndSetTimePrefAndSituationFlg($user_id, $pref_id, $situ_flg) {
 
-      $datas = $this::orderBy('ordres.created_at', 'desc')
+      $datas = self::orderBy('ordres.created_at', 'desc')
       ->select(
         'menus.*','users.*','ordres.*','menu_times.*','menus.name as menus_name',
         'ordres.created_at as ordres_created_at')

@@ -113,7 +113,7 @@ table tr:last-child td:last-child {
                 <option value="10">10</option>
                 </select>
               </td>
-              <td><img src="http://localhost:8010/storage/sample/{{ $menu->image }}"/></td>
+              <td><img src="{{ asset('storage/sample'.$menu->image)}}"/></td>
               <td>
               <button type="submit" class="btn btn-primary" onclick="return confirm('本当に商品を購入しますか？');">この商品をカートに入れる</button>
               </td>

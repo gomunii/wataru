@@ -68,7 +68,7 @@
               <tr>
                 <td>{{ $data->menus_name }}</td>
                 <td>{{ $data->price }}</td>
-                <td><img src="http://localhost:8010/storage/sample/{{ $data->image }}"/></td>
+                <td><img src="{{ asset('storage/sample'.$data->image )}}"/></td>
                 <td>{{ $data->quantity }}</td>
                 <td>
                 <form action="{{ route('ordres.createSave') }}" method="POST">
